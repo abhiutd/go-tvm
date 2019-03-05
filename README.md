@@ -1,2 +1,2 @@
 # go-tvm
-TVM wrapper to be run mobile devices
+Go wrapper for TVM to be deployed on mobile devices using gomobile 

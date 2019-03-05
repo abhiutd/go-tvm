@@ -1,0 +1,29 @@
+// refer to ./cbits.go for mobile app callable functions
+
+// exported functions
+New()
+SetUseCPU()
+SetUseGPU()
+SetUseDSP()
+SetUseVisualCore()
+Predict()
+ReadPredictionOutput()
+Close()
+
+// accelerator modes
+CPUMode=0
+GPUMode=1
+DSPMode=2
+VisualCore=3
+
+// create a new predictor
+func New(model string, mode, batch int) (*PredictorData, error) {}
+
+// perform inference
+func Predict(p *PredictorData, data []byte) error {}
+
+// output top-1 prediction
+func ReadPredictionOutput(p *PredictorData, labelFile string) (string, error) {}
+
+// delete predictor
+func Close(p *PredictorData) {}
